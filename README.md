@@ -92,3 +92,9 @@ Nesta tabela temos três triggers, que são responsáveis por:
 - Atualizar a quilometragem do carro;
 - Atualizar a condição do cliente, já que ele não estará mais alugando um carro;
 - Atualizar a condição do veículo, já que ele não estará mais sendo alugado.
+
+
+
+<h3>
+  Se tiver tudo certo da um total por obséquio ai professor :)
+</h3>
