@@ -67,6 +67,13 @@ unidade_devolucao  <br/>
 
 A chave `id_cliente` referencia à um cliente da tabela `Clientes`, a chave `id_veiuclo` referencia à um veículo da tabela de `Veiculos`, e as chaves `unidade_retirada` e `unidade_devolucao` referenciam à endereços da tabela `Unidades_Carloca`
 
+Nesta tabela temos quatro triggers, que são responsáveis por:
+
+- Verificar se o carro já está sendo alugado;
+- Verificar se o cliente já está alugando um carro;
+- Atualizar a condição do cliente, já que ele estará alugando um carro;
+- Atualizar a condição do veículo, já que ele estará mais sendo alugado.
+
 # Devolucao
 
 Por fim, nossa última tabela, que é responsável por informar os dados da devolucao de um véiculo, seus atributos são:
@@ -79,3 +86,9 @@ valor_avarias_veiculo  <br/>
 diarias_excedidas  <br/>
 
 A chave `id_aluguel` referencia a um aluguel da tebela `Alugeis`, a chave `data_devolucao` é responsável por verificar se houve diarias excedidas ou não
+
+Nesta tabela temos três triggers, que são responsáveis por:
+
+- Atualizar a quilometragem do carro;
+- Atualizar a condição do cliente, já que ele não estará mais alugando um carro;
+- Atualizar a condição do veículo, já que ele não estará mais sendo alugado.
