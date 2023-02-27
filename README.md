@@ -95,6 +95,61 @@ Nesta tabela temos três triggers, que são responsáveis por:
 
 
 
+<h1>
+  Explicando os requisitos do projeto
+</h1>
+
 <h3>
-  Se tiver tudo certo da um total por obséquio ai professor :)
+  Um carro possui modelo montadora, cor e versão.
 </h3>
+
+A tabela `veiculos` contempla todos esses parâmetros
+
+<h3>
+  As cores de carro disponiveis são apenas branco, preto e prata
+</h3>
+
+Na tabela `veiculos` o campo `cor` é do tipo _ENUM_  e seus valores aceitos são branco, preto e prata
+
+<h3>
+  Existem várias categorias de veiculos (hatch, sedam compacto, sedam médio, SUV, etc...)
+</h3>
+
+A tabela `categoria` executa esta função
+
+<h3>
+  Um cliente pode alugar um carro somente na modalidade "diária"
+</h3>
+
+Todo o bacno foi modelado considerando o regime de diáirias
+
+<h3>
+  Um cliente não pode alugar mais de um carro
+</h3>
+
+Existe um trigger na tabela `alugueis` que não permite um cliente alugar mais de um carro
+
+<h3>
+  Enquanto um carro estiver locado por um cliente não pode ser ofetado para outro
+</h3>
+
+Existe um campo na tabela `veiculos` (esta_alugado) que pode ser usado como filtro na hora de buscar um veículo disponível
+
+<h3>
+   O sistema deve manter o histórico dos clientes que locaram determinado carro
+</h3>
+
+Basta fazer uma query na tabela alugueis informando o id do cliente no where
+
+<h3>
+   O sistema deve manter o histórico de quantos quilometros o cliente rodou com o carro bemm como a quilometragem atual de cada um dos carros.
+</h3>
+
+O hisórico de quantos quilometros o cliente rodou pode ser feito na tabela devolução, fazendo um join na tabela alugueis, informando o id do cliente no where.
+E a quilometragem atual dos veículos está contemplada na tabela de veiculos
+
+<h3>
+   Existem várias unidades da fraquia CARLOCA o sistema deve saber onde o carro foi locado e onde foi devolvido cada veiculo
+</h3>
+
+Existe a tabela `unidades_carloca` que armazena os endereçois das franquias e na tabela `alugueis` existe o coluna `unidade_devolucao` e `unidade_retirada`que é em qual unidade o carro foi locado e em qual ele será devolvido
